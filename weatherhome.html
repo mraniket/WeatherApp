@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="time">
+        <h3 id="date"></h3>
+    </div>
+    <div>
+        <h1 class="location">{%location%}</h1>
+        <p>Temprature</p>
+        <h1 class="temp">{%Temprature%}&#8451</h1>
+        <p>Min Temp</p>
+        <h1 class="temp_min">{%tempMin%}&#8451</h1>
+        <p>Max Temp</p>
+        <h1 class="temp_max">{%tempMax%}&#8451</h1>
+    </div>
+</body>
+ <script>
+    const date = document.getElementById("date");
+
+    const currentTime = new Date();
+    const day = currentTime.getDate();
+    const month = currentTime.getMonth() + 1;
+    const year = currentTime.getFullYear();
+    const time = currentTime.toLocaleTimeString();
+
+    date.innerText = `${day}/${month}/${year} | ${time} `;
+ </script>
+
+</html>
